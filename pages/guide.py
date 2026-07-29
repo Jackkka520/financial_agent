@@ -1,11 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Financial Data Analyst",
-    page_icon="📊",
-    layout="wide",
-)
-
 st.title("📊 Financial Data Analyst")
 st.caption("AI-powered financial data analysis tool")
 
