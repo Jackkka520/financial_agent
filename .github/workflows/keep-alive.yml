@@ -1,0 +1,16 @@
+name: Keep Streamlit Awake
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Streamlit app
+        run: |
+          curl -L --fail --max-time 60 \
+          "https://financial-agent-zc-v1.streamlit.app//"
